@@ -12,7 +12,6 @@ export default function Home() {
 		seconds: 0,
 	})
 
-	// Для анимации при скролле
 	const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 	const [animatingSections, setAnimatingSections] = useState<Set<string>>(
 		new Set()
