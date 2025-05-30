@@ -644,10 +644,7 @@ export default function Home() {
 						<button
 							className='text-lg rounded-md px-6 py-2 text-neutral-100 font-bold bg-neutral-900 hover:bg-neutral-800'
 							onClick={() =>
-								window.open(
-									'#', // Здесь разместить ссылку на беседу
-									'_blank'
-								)
+								window.open('https://t.me/+lV8F6NDRdshiZTli', '_blank')
 							}
 						>
 							Присоединиться к беседе
