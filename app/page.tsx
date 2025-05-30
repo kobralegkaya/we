@@ -165,25 +165,25 @@ export default function Home() {
 				{/* TODO: wide screen adaptive */}
 				<div className='z-10  flex flex-1 flex-col justify-between h-full py-16 w-full'>
 					<div className='text-center'>
-						<p className='text-lg md:text-xl font-light tracking-wide animate-fade-in'>
+						<p className='text-lg md:text-xl  tracking-wide animate-fade-in'>
 							Wedding day
 						</p>
 					</div>
 
 					<div className='flex flex-col items-center  justify-between space-y-8 h-[63%]'>
-						<h1 className='text-5xl md:text-6xl font-light tracking-wide animate-fade-in-delay-1'>
+						<h1 className='text-5xl md:text-6xl  tracking-wide animate-fade-in-delay-1'>
 							ИЛЬЯ
 						</h1>
-						<span className='text-5xl md:text-6xl font-light animate-fade-in-delay-1'>
+						<span className='text-5xl md:text-6xl  animate-fade-in-delay-1'>
 							&
 						</span>
-						<h1 className='text-5xl md:text-6xl font-light tracking-wide animate-fade-in-delay-1'>
+						<h1 className='text-5xl md:text-6xl  tracking-wide animate-fade-in-delay-1'>
 							КСЕНИЯ
 						</h1>
 					</div>
 
 					<div className='text-center'>
-						<p className='text-xl md:text-2xl font-light tracking-wide animate-fade-in-delay-2'>
+						<p className='text-xl md:text-2xl  tracking-wide animate-fade-in-delay-2'>
 							30 августа 2025
 						</p>
 					</div>
@@ -324,7 +324,7 @@ export default function Home() {
 				</div>
 				<div className='max-w-md mx-auto text-center relative z-10'>
 					<h2
-						className={`text-4xl font-light uppercase tracking-widest mb-12 transition-all duration-1000 transform text-shadow ${
+						className={`text-4xl  uppercase tracking-widest mb-12 transition-all duration-1000 transform text-shadow ${
 							isAnimating('timeline')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -338,9 +338,7 @@ export default function Home() {
 							<div key={index}>
 								{/* Блок события */}
 								<div className='flex flex-col items-center'>
-									<div className='text-4xl font-light mb-2 text-shadow'>
-										{event.time}
-									</div>
+									<div className='text-4xl  mb-2 text-shadow'>{event.time}</div>
 									<div className='text-xl mb-1 text-shadow'>{event.title}</div>
 									<div className='text-base text-white/80 max-w-xs text-center mb-6 text-shadow'>
 										{event.description}
@@ -512,18 +510,18 @@ export default function Home() {
 					/>
 				</div>
 				<div className='z-20 text-center px-4'>
-					<h3 className='text-2xl md:text-3xl font-light uppercase tracking-widest mb-6 text-shadow'>
+					<h3 className='text-2xl md:text-3xl  uppercase tracking-widest mb-6 text-shadow'>
 						ДО СВАДЬБЫ ОСТАЛОСЬ
 					</h3>
 					<div className='flex justify-center gap-4'>
 						<div className='flex flex-col items-center'>
-							<div className='text-4xl font-light w-16 h-16 flex items-center justify-center text-shadow'>
+							<div className='text-4xl  w-16 h-16 flex items-center justify-center text-shadow'>
 								<span className='tabular-nums'>{timeLeft.days}</span>
 							</div>
 							<span className='text-sm mt-2 text-shadow'>дней</span>
 						</div>
 						<div className='flex flex-col items-center'>
-							<div className='text-4xl font-light w-16 h-16 flex items-center justify-center text-shadow'>
+							<div className='text-4xl  w-16 h-16 flex items-center justify-center text-shadow'>
 								<span className='tabular-nums'>
 									{formatNumber(timeLeft.hours)}
 								</span>
@@ -531,7 +529,7 @@ export default function Home() {
 							<span className='text-sm mt-2 text-shadow'>часов</span>
 						</div>
 						<div className='flex flex-col items-center'>
-							<div className='text-4xl font-light w-16 h-16 flex items-center justify-center text-shadow'>
+							<div className='text-4xl  w-16 h-16 flex items-center justify-center text-shadow'>
 								<span className='tabular-nums'>
 									{formatNumber(timeLeft.minutes)}
 								</span>
@@ -539,7 +537,7 @@ export default function Home() {
 							<span className='text-sm mt-2 text-shadow'>минут</span>
 						</div>
 						<div className='flex flex-col items-center'>
-							<div className='text-4xl font-light w-16 h-16 flex items-center justify-center text-shadow'>
+							<div className='text-4xl  w-16 h-16 flex items-center justify-center text-shadow'>
 								<span className='tabular-nums'>
 									{formatNumber(timeLeft.seconds)}
 								</span>
@@ -676,10 +674,8 @@ export default function Home() {
 			<section id='final' className='w-full py-16 px-6 bg-paper'>
 				<div className='max-w-md mx-auto text-center pt-8'>
 					<div className=''>
-						<p className='text-2xl font-light tracking-wide'>Мы ждем Вас!</p>
-						<p className='text-2xl font-light tracking-wide mt-2'>
-							Ваши Илья и Ксения
-						</p>
+						<p className='text-2xl  tracking-wide'>Мы ждем Вас!</p>
+						<p className='text-2xl  tracking-wide mt-2'>Ваши Илья и Ксения</p>
 					</div>
 				</div>
 			</section>
