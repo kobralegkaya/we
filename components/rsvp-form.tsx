@@ -62,7 +62,7 @@ export function RSVPForm() {
 			className='max-w-md mx-auto text-left space-y-6'
 		>
 			<div className='space-y-2'>
-				<Label htmlFor='name' className='text-base'>
+				<Label htmlFor='name' className='text-lg'>
 					Имя Фамилия
 				</Label>
 				<Input
@@ -71,12 +71,12 @@ export function RSVPForm() {
 					value={formData.name}
 					onChange={handleChange}
 					required
-					className='text-base'
+					className='text-lg'
 				/>
 			</div>
 
 			<div className='space-y-2'>
-				<Label htmlFor='phone' className='text-base'>
+				<Label htmlFor='phone' className='text-lg'>
 					Номер телефона
 				</Label>
 				<Input
@@ -85,12 +85,12 @@ export function RSVPForm() {
 					value={formData.phone}
 					onChange={handleChange}
 					required
-					className='text-base'
+					className='text-lg'
 				/>
 			</div>
 
 			<div className='space-y-2'>
-				<Label className='text-base'>
+				<Label className='text-lg'>
 					Вы сможете присутствовать на мероприятии?
 				</Label>
 				<RadioGroup
@@ -100,13 +100,13 @@ export function RSVPForm() {
 				>
 					<div className='flex items-center space-x-2'>
 						<RadioGroupItem value='yes' id='attendance-yes' />
-						<Label htmlFor='attendance-yes' className='text-base'>
+						<Label htmlFor='attendance-yes' className='text-lg'>
 							Да
 						</Label>
 					</div>
 					<div className='flex items-center space-x-2'>
 						<RadioGroupItem value='no' id='attendance-no' />
-						<Label htmlFor='attendance-no' className='text-base'>
+						<Label htmlFor='attendance-no' className='text-lg'>
 							Нет
 						</Label>
 					</div>
@@ -116,7 +116,7 @@ export function RSVPForm() {
 			{formData.attendance === 'yes' && (
 				<>
 					<div className='space-y-4'>
-						<Label className='text-base'>Предпочтения по алкоголю</Label>
+						<Label className='text-lg'>Предпочтения по алкоголю</Label>
 						<div className='grid grid-cols-2 gap-2'>
 							<div className='flex items-center space-x-2'>
 								<Checkbox
@@ -126,7 +126,7 @@ export function RSVPForm() {
 										handleCheckboxChange('champagne', checked === true)
 									}
 								/>
-								<Label htmlFor='champagne' className='text-base'>
+								<Label htmlFor='champagne' className='text-lg'>
 									Шампанское
 								</Label>
 							</div>
@@ -138,7 +138,7 @@ export function RSVPForm() {
 										handleCheckboxChange('white-wine', checked === true)
 									}
 								/>
-								<Label htmlFor='white-wine' className='text-base'>
+								<Label htmlFor='white-wine' className='text-lg'>
 									Вино белое
 								</Label>
 							</div>
@@ -150,7 +150,7 @@ export function RSVPForm() {
 										handleCheckboxChange('red-wine', checked === true)
 									}
 								/>
-								<Label htmlFor='red-wine' className='text-base'>
+								<Label htmlFor='red-wine' className='text-lg'>
 									Вино красное
 								</Label>
 							</div>
@@ -162,7 +162,7 @@ export function RSVPForm() {
 										handleCheckboxChange('vodka', checked === true)
 									}
 								/>
-								<Label htmlFor='vodka' className='text-base'>
+								<Label htmlFor='vodka' className='text-lg'>
 									Водка
 								</Label>
 							</div>
@@ -174,7 +174,7 @@ export function RSVPForm() {
 										handleCheckboxChange('cognac', checked === true)
 									}
 								/>
-								<Label htmlFor='cognac' className='text-base'>
+								<Label htmlFor='cognac' className='text-lg'>
 									Коньяк
 								</Label>
 							</div>
@@ -186,7 +186,7 @@ export function RSVPForm() {
 										handleCheckboxChange('whiskey', checked === true)
 									}
 								/>
-								<Label htmlFor='whiskey' className='text-base'>
+								<Label htmlFor='whiskey' className='text-lg'>
 									Виски
 								</Label>
 							</div>
@@ -198,7 +198,7 @@ export function RSVPForm() {
 										handleCheckboxChange('no-alcohol', checked === true)
 									}
 								/>
-								<Label htmlFor='no-alcohol' className='text-base'>
+								<Label htmlFor='no-alcohol' className='text-lg'>
 									Безалкогольные
 								</Label>
 							</div>
@@ -206,7 +206,7 @@ export function RSVPForm() {
 					</div>
 
 					<div className='space-y-2'>
-						<Label htmlFor='dietaryRestrictions' className='text-base'>
+						<Label htmlFor='dietaryRestrictions' className='text-lg'>
 							Есть ли у вас пищевые ограничения?
 						</Label>
 						<Textarea
@@ -215,7 +215,7 @@ export function RSVPForm() {
 							value={formData.dietaryRestrictions}
 							onChange={handleChange}
 							placeholder='Например: вегетарианство, аллергия на орехи и т.д.'
-							className='text-base'
+							className='text-lg'
 						/>
 					</div>
 				</>
@@ -223,7 +223,7 @@ export function RSVPForm() {
 
 			<Button
 				type='submit'
-				className='w-full bg-neutral-900 hover:bg-neutral-800 text-base'
+				className='w-full bg-neutral-900 hover:bg-neutral-800 text-lg'
 			>
 				Отправить
 			</Button>
