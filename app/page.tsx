@@ -256,7 +256,7 @@ export default function Home() {
 			</section>
 
 			{/* Location Section */}
-			<section id='location' className='w-full py-16 px-6 pt-28 bg-paper'>
+			<section id='location' className='w-full py-16 px-6 bg-paper'>
 				<div className='max-w-md mx-auto text-center'>
 					<h2
 						className={`text-4xl font-normal text-center mb-8 transition-all duration-1000 transform uppercase ${
