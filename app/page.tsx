@@ -204,7 +204,7 @@ export default function Home() {
 					</h2>
 
 					<p
-						className={`text-xl text-neutral-700 transition-all duration-1000 delay-300 transform ${
+						className={`text-xl  transition-all duration-1000 delay-300 transform ${
 							isAnimating('invitation')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -226,7 +226,7 @@ export default function Home() {
 					</div>
 
 					<p
-						className={`text-xl text-neutral-700 mt-8 transition-all duration-1000 delay-700 transform ${
+						className={`text-xl  mt-8 transition-all duration-1000 delay-700 transform ${
 							isAnimating('invitation')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -279,14 +279,12 @@ export default function Home() {
 								: 'opacity-0 translate-y-10'
 						}`}
 					>
-						<p className='text-xl font-normal text-neutral-700'>
-							Мы будем ждать Вас по адресу
-						</p>
+						<p className='text-xl font-normal '>Мы будем ждать Вас по адресу</p>
 						<h3 className='text-2xl font-normal text-center'>
 							Банкетный зал «Wedplace»
 						</h3>
 
-						<div className='text-neutral-700 text-center leading-relaxed '>
+						<div className=' text-center leading-relaxed '>
 							<p>Берёзовая ул., 10А, д. Капитаново,</p>
 							<p>Витебский р-н</p>
 						</div>
@@ -372,7 +370,7 @@ export default function Home() {
 					</h2>
 
 					<p
-						className={`text-xl text-neutral-700 transition-all duration-1000 delay-300 transform ${
+						className={`text-xl  transition-all duration-1000 delay-300 transform ${
 							isAnimating('details')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -389,14 +387,14 @@ export default function Home() {
 								: 'opacity-0 translate-y-10'
 						}`}
 					>
-						<div className='text-neutral-700'>
+						<div className=''>
 							<p className='text-lg leading-relaxed'>
 								• Ваши улыбки подарят нам счастье в этот день, а пожелания в
 								конвертах помогут осуществить мечты!
 							</p>
 						</div>
 
-						<div className='text-neutral-700'>
+						<div className=''>
 							<p className='text-lg leading-relaxed'>
 								• Пожалуйста, не обременяйте себя покупкой красивого букета. Мы
 								не успеем насладиться их красотой, а вот бутылочка вашего
@@ -404,7 +402,7 @@ export default function Home() {
 							</p>
 						</div>
 
-						<div className='text-neutral-700'>
+						<div className=''>
 							<p className='text-lg leading-relaxed'>
 								• Для всех гостей будет организован трансфер, который отправится
 								30.08.2025 от Ледового дворца г. Орша ориентировочно в
@@ -416,7 +414,7 @@ export default function Home() {
 							</p>
 						</div>
 
-						<div className='text-neutral-700'>
+						<div className=''>
 							<p className='text-lg leading-relaxed'>
 								• Место проведения нашего торжества — чудесная локация, но, увы,
 								без возможности ночлега. Дорогие гости из других городов,
@@ -425,7 +423,7 @@ export default function Home() {
 							</p>
 						</div>
 
-						<div className='text-neutral-700'>
+						<div className=''>
 							<p className='text-lg leading-relaxed'>
 								• В воскресенье, 31.08.2025, в г. Орша будет организован
 								неофициальный и расслабленный «второй день» нашей свадьбы в
@@ -452,7 +450,7 @@ export default function Home() {
 					</h2>
 
 					<p
-						className={`text-xl text-neutral-700 max-w-md mx-auto transition-all duration-1000 delay-300 transform ${
+						className={`text-xl  max-w-md mx-auto transition-all duration-1000 delay-300 transform ${
 							isAnimating('dress-code')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -488,7 +486,7 @@ export default function Home() {
 					</div>
 
 					<p
-						className={`text-xl text-neutral-700 max-w-md mx-auto mt-8 transition-all duration-1000 delay-700 transform ${
+						className={`text-xl  max-w-md mx-auto mt-8 transition-all duration-1000 delay-700 transform ${
 							isAnimating('dress-code')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -566,7 +564,7 @@ export default function Home() {
 					</h2>
 
 					<p
-						className={`text-xl text-neutral-700 transition-all duration-1000 delay-300 transform ${
+						className={`text-xl  transition-all duration-1000 delay-300 transform ${
 							isAnimating('rsvp')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -587,7 +585,7 @@ export default function Home() {
 					</div>
 
 					<p
-						className={`text-xl text-neutral-700 mt-8 transition-all duration-1000 delay-700 transform ${
+						className={`text-xl  mt-8 transition-all duration-1000 delay-700 transform ${
 							isAnimating('rsvp')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -626,7 +624,7 @@ export default function Home() {
 					</h2>
 
 					<p
-						className={`text-xl text-neutral-700 transition-all duration-1000 delay-300 transform ${
+						className={`text-xl  transition-all duration-1000 delay-300 transform ${
 							isAnimating('telegram')
 								? 'opacity-100 translate-y-0'
 								: 'opacity-0 translate-y-10'
@@ -677,7 +675,7 @@ export default function Home() {
 
 			<section id='final' className='w-full py-16 px-6 bg-paper'>
 				<div className='max-w-md mx-auto text-center pt-8'>
-					<div className='text-neutral-700'>
+					<div className=''>
 						<p className='text-2xl font-light tracking-wide'>Мы ждем Вас!</p>
 						<p className='text-2xl font-light tracking-wide mt-2'>
 							Ваши Илья и Ксения
