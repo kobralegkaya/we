@@ -163,27 +163,23 @@ export default function Home() {
 				</div>
 
 				{/* TODO: wide screen adaptive */}
-				<div className='z-10  flex flex-1 flex-col justify-between h-full py-16 w-full'>
-					<div className='text-center'>
-						<p className='text-lg md:text-xl  tracking-wide animate-fade-in'>
-							Wedding day
-						</p>
+				<div className='z-10  flex flex-1 flex-col justify-between h-full py-10 w-full'>
+					<div className='text-center pb-4'>
+						<p className='text-xl tracking-wide animate-fade-in'>Wedding day</p>
 					</div>
 
-					<div className='flex flex-col items-center  justify-between space-y-8 h-[63%]'>
-						<h1 className='text-5xl md:text-6xl  tracking-wide animate-fade-in-delay-1'>
+					<div className='flex flex-col items-center  justify-between space-y-8 h-full'>
+						<h1 className='text-6xl tracking-wide animate-fade-in-delay-1'>
 							ИЛЬЯ
 						</h1>
-						<span className='text-5xl md:text-6xl  animate-fade-in-delay-1'>
-							&
-						</span>
-						<h1 className='text-5xl md:text-6xl  tracking-wide animate-fade-in-delay-1'>
+						<span className='text-6xl animate-fade-in-delay-1'>&</span>
+						<h1 className='text-6xl tracking-wide animate-fade-in-delay-1'>
 							КСЕНИЯ
 						</h1>
 					</div>
 
 					<div className='text-center'>
-						<p className='text-xl md:text-2xl  tracking-wide animate-fade-in-delay-2'>
+						<p className='text-xl tracking-wide animate-fade-in-delay-2'>
 							30 августа 2025
 						</p>
 					</div>
@@ -417,7 +413,10 @@ export default function Home() {
 								• Место проведения нашего торжества — чудесная локация, но, увы,
 								без возможности ночлега. Дорогие гости из других городов,
 								пожалуйста, заранее подумайте о проживании и дороге до Орши.
-								Если потребуется — мы готовы помочь с расселением. Все решаемо!
+								Если возникнут сложности — не волнуйтесь: мы с радостью
+								подскажем комфортные варианты размещения и поможем с
+								организацией. Если потребуется — мы готовы помочь с расселением.
+								Все решаемо!
 							</p>
 						</div>
 
