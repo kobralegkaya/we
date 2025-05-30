@@ -657,7 +657,7 @@ export default function Home() {
 				<div className='absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10'>
 					<div className='w-36 h-36 rounded-full overflow-hidden border-4 border-white'>
 						<Image
-							src='/images/circle.jpg'
+							src='/images/circle.JPG'
 							alt='Фото пары'
 							width={144}
 							height={144}
