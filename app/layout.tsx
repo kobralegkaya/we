@@ -9,16 +9,26 @@ const cormorant = Cormorant({
 	variable: '--font-cormorant',
 })
 
-export const metadata: Metadata = {
-	title: 'Свадьба Ильи и Ксении | 30.08.2025',
-	description:
-		'Приглашение на свадьбу Ильи и Ксении, которая состоится 30 августа 2025 года',
+const title = 'Свадьба Ильи и Ксении | 30.08.2025'
+const description =
+	'Приглашение на свадьбу Ильи и Ксении, которая состоится 30 августа 2025 года'
 
+export const metadata: Metadata = {
+	title,
+	description,
 	openGraph: {
-		title: 'Свадьба Ильи и Ксении | 30.08.2025',
-		description:
-			'Приглашение на свадьбу Ильи и Ксении, которая состоится 30 августа 2025 года',
-		images: ['/images/hero.jpeg'],
+		title,
+		description,
+		type: 'website',
+		url: 'https://we-q1nj.vercel.app/',
+		images: [
+			{
+				url: 'https://we-q1nj.vercel.app/images/hero.jpeg',
+				width: 1200,
+				height: 630,
+				alt: 'Свадьба Ильи и Ксении',
+			},
+		],
 	},
 }
 
