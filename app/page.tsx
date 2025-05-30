@@ -190,7 +190,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section id='invitation' className='w-full py-16 px-6 pb-28 bg-paper'>
+			<section id='invitation' className='w-full py-16 px-6 pb-36 bg-paper'>
 				<div className='max-w-md mx-auto text-center space-y-8'>
 					<h2
 						className={`text-4xl font-normal transition-all duration-1000 transform uppercase ${
@@ -247,7 +247,7 @@ export default function Home() {
 						<Image
 							src='/images/bow.png'
 							alt='Декоративный бант'
-							width={200}
+							width={150}
 							height={50}
 							className='mx-auto absolute'
 							style={{
@@ -300,7 +300,7 @@ export default function Home() {
 						}`}
 					>
 						<button
-							className='text-lg font-normal rounded-md px-6 py-2 text-neutral-100 font-bold bg-[#2b2b2b] '
+							className='text-lg rounded-md px-6 py-2 text-neutral-100 font-bold bg-neutral-900 hover:bg-neutral-800'
 							onClick={() =>
 								window.open(
 									'https://maps.google.com/?q=Берёзовая+ул.,+10А,+д.+Капитаново,+Витебский+р-н',
@@ -409,10 +409,10 @@ export default function Home() {
 								• Для всех гостей будет организован трансфер, который отправится
 								30.08.2025 от Ледового дворца г. Орша ориентировочно в
 								13:15–13:30 и доставит вас до локации нашего торжества (точное
-								время мы сообщим в телеграм-беседе для наших любимых гостей —
-								ссылка на неё будет чуть ниже). Нам очень важно, чтобы каждый
-								чувствовал себя комфортно, поэтому в конце торжества вас также
-								будет ожидать трансфер обратно.
+								время мы сообщим в телеграм-беседе — ссылка на неё будет чуть
+								ниже). Нам очень важно, чтобы каждый чувствовал себя комфортно,
+								поэтому в конце торжества вас также будет ожидать трансфер
+								обратно.
 							</p>
 						</div>
 
@@ -421,9 +421,7 @@ export default function Home() {
 								• Место проведения нашего торжества — чудесная локация, но, увы,
 								без возможности ночлега. Дорогие гости из других городов,
 								пожалуйста, заранее подумайте о проживании и дороге до Орши.
-								Если возникнут сложности — не волнуйтесь: мы с радостью
-								подскажем комфортные варианты размещения и поможем с
-								организацией. Всё решаемо!
+								Если потребуется — мы готовы помочь с расселением. Все решаемо!
 							</p>
 						</div>
 
@@ -574,18 +572,8 @@ export default function Home() {
 								: 'opacity-0 translate-y-10'
 						}`}
 					>
-						Пожалуйста, подтвердите своё присутствие до 01.06.2025.
-					</p>
-
-					<p
-						className={`text-xl text-neutral-700 transition-all duration-1000 delay-300 transform ${
-							isAnimating('rsvp')
-								? 'opacity-100 translate-y-0'
-								: 'opacity-0 translate-y-10'
-						}`}
-					>
 						Мы будем очень рады видеть Вас на нашем торжестве. Пожалуйста,
-						подтвердите своё присутствие, заполнив форму ниже.
+						подтвердите свое присутствие до 01.06.2025, заполнив форму ниже.
 					</p>
 
 					<div
@@ -624,7 +612,7 @@ export default function Home() {
 			{/* Telegram Chat Section */}
 			<section
 				id='telegram'
-				className='w-full py-16 px-6 pb-36 bg-paper border-neutral-200'
+				className='w-full py-16 px-6 pb-28 bg-paper border-neutral-200'
 			>
 				<div className='max-w-md mx-auto text-center space-y-6'>
 					<h2
@@ -659,7 +647,7 @@ export default function Home() {
 						}`}
 					>
 						<button
-							className='text-lg rounded-md px-6 py-2 text-neutral-100 font-bold bg-[#2b2b2b] '
+							className='text-lg rounded-md px-6 py-2 text-neutral-100 font-bold bg-neutral-900 hover:bg-neutral-800'
 							onClick={() =>
 								window.open(
 									'#', // Здесь разместить ссылку на беседу
@@ -673,25 +661,18 @@ export default function Home() {
 				</div>
 			</section>
 
-			<div
-				className={`relative transition-all w-full duration-1000 delay-900 transform z-10 ${
-					isAnimating('invitation')
-						? 'opacity-100 translate-y-0'
-						: 'opacity-0 translate-y-10'
-				}`}
-			>
-				<Image
-					src='/images/bow.png'
-					alt='Декоративный бант'
-					width={200}
-					height={50}
-					className='mx-auto absolute'
-					style={{
-						left: '50%',
-						transform: 'translateX(-50%)',
-						bottom: '-75px',
-					}}
-				/>
+			<div className='relative w-full'>
+				<div className='absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10'>
+					<div className='w-36 h-36 rounded-full overflow-hidden border-4 border-white'>
+						<Image
+							src='/images/circle.jpg'
+							alt='Фото пары'
+							width={144}
+							height={144}
+							className='object-cover w-full h-full'
+						/>
+					</div>
+				</div>
 			</div>
 
 			<section id='final' className='w-full py-16 px-6 bg-paper'>
