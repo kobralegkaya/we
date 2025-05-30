@@ -1,28 +1,35 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Cormorant } from "next/font/google"
-import "./globals.css"
+import type { Metadata } from 'next'
+import { Cormorant } from 'next/font/google'
+import type React from 'react'
+import './globals.css'
 
 const cormorant = Cormorant({
-  subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
+	subsets: ['latin', 'cyrillic'],
+	weight: ['300', '400', '500', '600', '700'],
+	variable: '--font-cormorant',
 })
 
 export const metadata: Metadata = {
-  title: "Свадьба Ильи и Ксении | 30.08.2025",
-  description: "Приглашение на свадьбу Ильи и Ксении, которая состоится 30 августа 2025 года",
-    generator: 'v0.dev'
+	title: 'Свадьба Ильи и Ксении | 30.08.2025',
+	description:
+		'Приглашение на свадьбу Ильи и Ксении, которая состоится 30 августа 2025 года',
+
+	openGraph: {
+		title: 'Свадьба Ильи и Ксении | 30.08.2025',
+		description:
+			'Приглашение на свадьбу Ильи и Ксении, которая состоится 30 августа 2025 года',
+		images: ['/images/hero.jpeg'],
+	},
 }
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode
+	children: React.ReactNode
 }) {
-  return (
-    <html lang="ru" className={cormorant.className}>
-      <body className="bg-paper bg-repeat">{children}</body>
-    </html>
-  )
+	return (
+		<html lang='ru' className={cormorant.className}>
+			<body className='bg-paper bg-repeat'>{children}</body>
+		</html>
+	)
 }
