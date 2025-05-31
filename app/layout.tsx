@@ -23,8 +23,7 @@ export const metadata: Metadata = {
 		url: 'https://we-q1nj.vercel.app/',
 		images: [
 			{
-				url: 'https://we-q1nj.vercel.app/images/hero.jpeg',
-				width: 1200,
+				url: 'https://we-q1nj.vercel.app/images/preview.jpg',
 				height: 630,
 				alt: 'Свадьба Ильи и Ксении',
 			},
