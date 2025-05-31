@@ -10,15 +10,18 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Textarea } from '@/components/ui/textarea'
 import { useState } from 'react'
 
+const initialState = {
+	name: '',
+	phone: '',
+	attendance: 'yes',
+	alcoholPreferences: [] as string[],
+	dietaryRestrictions: '',
+	message: '',
+}
+
 export function RSVPForm() {
-	const [formData, setFormData] = useState({
-		name: '',
-		phone: '',
-		attendance: 'yes',
-		alcoholPreferences: [] as string[],
-		dietaryRestrictions: '',
-		message: '',
-	})
+	const [formData, setFormData] = useState(initialState)
+	const [isLoading, setIsLoading] = useState(false)
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,11 +52,33 @@ export function RSVPForm() {
 		})
 	}
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
-		// В реальном приложении здесь будет отправка данных на сервер
-		console.log('Form submitted:', formData)
-		alert('Спасибо! Ваш ответ получен.')
+
+		try {
+			setIsLoading(true)
+			const response = await fetch(
+				'https://script.google.com/macros/s/AKfycbzm0E3ahJJjqHxzGHCmsdfgVM1t6qjTYIuWeCW_vz69_F1FAU40rTegvFbg5RkYNp2TsQ/exec',
+				{
+					method: 'POST',
+					body: JSON.stringify(formData),
+				}
+			)
+
+			if (response.ok) {
+				alert('Спасибо! Ваш ответ получен.')
+
+				console.log('Form submitted:', formData)
+			} else {
+				alert('Произошла ошибка при отправке формы.')
+			}
+		} catch (error) {
+			console.error('Ошибка отправки:', error)
+			alert('Ошибка при подключении к серверу.')
+		} finally {
+			setIsLoading(false)
+			setFormData(initialState)
+		}
 	}
 
 	return (
@@ -82,6 +107,7 @@ export function RSVPForm() {
 				<Input
 					id='phone'
 					name='phone'
+					type='tel'
 					value={formData.phone}
 					onChange={handleChange}
 					required
@@ -121,9 +147,9 @@ export function RSVPForm() {
 							<div className='flex items-center space-x-2'>
 								<Checkbox
 									id='champagne'
-									checked={formData.alcoholPreferences.includes('champagne')}
+									checked={formData.alcoholPreferences.includes('Шампанское')}
 									onCheckedChange={checked =>
-										handleCheckboxChange('champagne', checked === true)
+										handleCheckboxChange('Шампанское', checked === true)
 									}
 								/>
 								<Label htmlFor='champagne' className='text-lg'>
@@ -133,9 +159,9 @@ export function RSVPForm() {
 							<div className='flex items-center space-x-2'>
 								<Checkbox
 									id='white-wine'
-									checked={formData.alcoholPreferences.includes('white-wine')}
+									checked={formData.alcoholPreferences.includes('Вино белое')}
 									onCheckedChange={checked =>
-										handleCheckboxChange('white-wine', checked === true)
+										handleCheckboxChange('Вино белое', checked === true)
 									}
 								/>
 								<Label htmlFor='white-wine' className='text-lg'>
@@ -145,9 +171,9 @@ export function RSVPForm() {
 							<div className='flex items-center space-x-2'>
 								<Checkbox
 									id='red-wine'
-									checked={formData.alcoholPreferences.includes('red-wine')}
+									checked={formData.alcoholPreferences.includes('Вино красное')}
 									onCheckedChange={checked =>
-										handleCheckboxChange('red-wine', checked === true)
+										handleCheckboxChange('Вино красное', checked === true)
 									}
 								/>
 								<Label htmlFor='red-wine' className='text-lg'>
@@ -157,9 +183,9 @@ export function RSVPForm() {
 							<div className='flex items-center space-x-2'>
 								<Checkbox
 									id='vodka'
-									checked={formData.alcoholPreferences.includes('vodka')}
+									checked={formData.alcoholPreferences.includes('Водка')}
 									onCheckedChange={checked =>
-										handleCheckboxChange('vodka', checked === true)
+										handleCheckboxChange('Водка', checked === true)
 									}
 								/>
 								<Label htmlFor='vodka' className='text-lg'>
@@ -169,9 +195,9 @@ export function RSVPForm() {
 							<div className='flex items-center space-x-2'>
 								<Checkbox
 									id='cognac'
-									checked={formData.alcoholPreferences.includes('cognac')}
+									checked={formData.alcoholPreferences.includes('Коньяк')}
 									onCheckedChange={checked =>
-										handleCheckboxChange('cognac', checked === true)
+										handleCheckboxChange('Коньяк', checked === true)
 									}
 								/>
 								<Label htmlFor='cognac' className='text-lg'>
@@ -181,9 +207,9 @@ export function RSVPForm() {
 							<div className='flex items-center space-x-2'>
 								<Checkbox
 									id='whiskey'
-									checked={formData.alcoholPreferences.includes('whiskey')}
+									checked={formData.alcoholPreferences.includes('Виски')}
 									onCheckedChange={checked =>
-										handleCheckboxChange('whiskey', checked === true)
+										handleCheckboxChange('Виски', checked === true)
 									}
 								/>
 								<Label htmlFor='whiskey' className='text-lg'>
@@ -193,9 +219,11 @@ export function RSVPForm() {
 							<div className='flex items-center space-x-2'>
 								<Checkbox
 									id='no-alcohol'
-									checked={formData.alcoholPreferences.includes('no-alcohol')}
+									checked={formData.alcoholPreferences.includes(
+										'Безалкогольные'
+									)}
 									onCheckedChange={checked =>
-										handleCheckboxChange('no-alcohol', checked === true)
+										handleCheckboxChange('Безалкогольные', checked === true)
 									}
 								/>
 								<Label htmlFor='no-alcohol' className='text-lg'>
@@ -223,6 +251,7 @@ export function RSVPForm() {
 
 			<Button
 				type='submit'
+				disabled={isLoading}
 				className='w-full bg-neutral-900 hover:bg-neutral-800 text-lg'
 			>
 				Отправить
