@@ -139,18 +139,22 @@ p {
 	animation: bounce 2s infinite;
 }
 
-/* Улучшаем тень для текста */
 .text-shadow {
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Фон бумаги - улучшенная версия */
 .bg-paper {
 	background-image: url('/images/paper-texture.png');
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
 	background-color: #f5f2e9;
+}
+
+@supports (-webkit-touch-callout: none) {
+	.bg-paper {
+		background-attachment: scroll;
+	}
 }
 
 .bg-paper::after {
