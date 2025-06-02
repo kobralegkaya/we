@@ -477,6 +477,7 @@ export default function Home() {
 										className='w-full h-full object-cover'
 									/>
 								</div>
+
 								<span className='text-base mt-3'>{color.name}</span>
 							</div>
 						))}
